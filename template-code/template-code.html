@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Dạy Học</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .code-container {
+            position: relative;
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .code-container pre {
+            margin: 0;
+            overflow-x: auto;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f92672;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .text-container {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Trang Dạy Học</h1>
+        <div class="text-container">
+            <p>Đây là đoạn văn bản được chèn vào trang HTML.</p>
+        </div>
+        <div class="code-container">
+            <button class="copy-btn" onclick="copyCode()">Copy</button>
+            <pre><code id="code">
+&lt;!-- Đây là mã HTML mẫu --&gt;
+&lt;div&gt;Hello, world!&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+
+    <script>
+        function copyCode() {
+            const txt_copy = document.querySelector(".copy-btn");
+
+            var code = document.getElementById("code").innerText;
+            navigator.clipboard.writeText(code).then(function () {
+                txt_copy.innerHTML = "Copied!"
+                // alert("Đã sao chép mã!");
+            }, function () {
+                txt_copy.innerHTML = "Fail!"
+                // alert("Sao chép thất bại!");
+            });
+        }
+    </script>
+</body>
+
+</html>
