@@ -5,76 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Dạy Học</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .code-container {
-            position: relative;
-            background-color: #272822;
-            color: #f8f8f2;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .code-container pre {
-            margin: 0;
-            overflow-x: auto;
-        }
-
-        .copy-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #f92672;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .text-container {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Trang Dạy Học</h1>
-        <div class="text-container">
-            <p>Đây là đoạn văn bản được chèn vào trang HTML.</p>
+    <header id="header">
+        <p>A グループ</p>
+    </header>
+
+    <div id="container">
+
+        <main id="center" class="column">
+            <div class="container_txt">
+                <h1>Trang Dạy Học</h1>
+                <div class="text-container_txt">
+                    <p>Đây là đoạn văn bản được chèn vào trang HTML.</p>
+                </div>
+                <div class="code-container_txt">
+                    <button class="copy-btn" onclick="copyCode()">Copy</button>
+                    <pre><code id="code">
+        &lt;!-- Đây là mã HTML mẫu --&gt;
+        &lt;div&gt;Hello, world!&lt;/div&gt;
+                    </code></pre>
+                </div>
+            </div>
+        </main>
+
+        <nav id="left" class="column">
+            <h3>Left heading</h3>
+            <ul>
+                <li><a href="./template-code.html">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+            </ul>
+            <h3>Left heading</h3>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+            </ul>
+
+        </nav>
+
+        <div id="right" class="column">
+            <h3>Right heading</h3>
+            <p>
+                <script>generateText(1)</script>
+            </p>
         </div>
-        <div class="code-container">
-            <button class="copy-btn" onclick="copyCode()">Copy</button>
-            <pre><code id="code">
-&lt;!-- Đây là mã HTML mẫu --&gt;
-&lt;div&gt;Hello, world!&lt;/div&gt;
-            </code></pre>
-        </div>
+
     </div>
+
+    <div id="footer-wrapper">
+        <footer id="footer">
+            <p>Footer...</p>
+        </footer>
+    </div>
+
+
+
+
+
+
 
     <script>
         function copyCode() {
